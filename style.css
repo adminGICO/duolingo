@@ -1,0 +1,141 @@
+/* Stili Generali e Responsive Design */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.import-section {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Stili Flashcard */
+#flashcard-container {
+    width: 100%;
+    max-width: 600px;
+    perspective: 1000px; /* Per animazioni 3D future */
+}
+
+#flashcard {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.question-text {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Input e Controlli */
+#user-input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    text-align: center;
+}
+
+#show-answer-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+#show-answer-btn:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+#show-answer-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Retro Card Stili */
+.card-face.hidden {
+    display: none;
+}
+
+.label {
+    font-weight: bold;
+    color: #555;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.solution-text {
+    font-size: 1.6em;
+    color: #28a745;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.context-text {
+    font-style: italic;
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+/* Controlli SRS (Ripetizione Dilazionata) */
+.srs-controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.srs-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.srs-btn:hover {
+    opacity: 0.9;
+}
+
+.hard { background-color: #dc3545; } /* Rosso per Difficile */
+.medium { background-color: #ffc107; color: #333; } /* Giallo per Normale */
+.easy { background-color: #28a745; } /* Verde per Facile */
+
+#message-area {
+    margin-top: 20px;
+    color: #dc3545;
+}
