@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Language SRS - Il tuo Duolingo Personale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Il tuo Tutor Linguistico AI</h1>
+        <div class="import-section">
+            <label for="file-input">Importa Dati (CSV/TSV con ';'):</label>
+            <input type="file" id="file-input" accept=".txt, .csv, .tsv">
+            <p id="card-count">Flashcard Caricate: 0</p>
+        </div>
+    </header>
+
+    <main>
+        <div id="flashcard-container">
+            <div id="flashcard" class="card">
+                <div id="front" class="card-face">
+                    <p id="question-text" class="question-text">Carica un file o inizia lo studio.</p>
+                    <input type="text" id="user-input" placeholder="Scrivi la parola mancante qui">
+                    <button id="show-answer-btn" disabled>Mostra Soluzione</button>
+                </div>
+
+                <div id="back" class="card-face hidden">
+                    <p class="label">Soluzione:</p>
+                    <p id="solution-text" class="solution-text"></p>
+                    <p class="label">Contesto (Traduzione):</p>
+                    <p id="context-text" class="context-text"></p>
+                    
+                    <div id="srs-controls" class="srs-controls">
+                        <p class="label">Valuta la Difficoltà:</p>
+                        <button id="hard-btn" class="srs-btn hard">Difficile</button>
+                        <button id="medium-btn" class="srs-btn medium">Normale</button>
+                        <button id="easy-btn" class="srs-btn easy">Facile</button>
+                    </div>
+                </div>
+
+                <div id="message-area"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
